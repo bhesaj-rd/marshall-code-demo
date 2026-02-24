@@ -39,6 +39,7 @@ function App() {
           <div className="nav-links">
             <a href="#solutions">Solutions</a>
             <a href="#products">Products</a>
+            <a href="#work">Work</a>
             <a href="#contact" className="nav-cta">Get Started</a>
           </div>
         </nav>
@@ -217,8 +218,100 @@ function App() {
         </div>
       </section>
 
+      {/* Work Section */}
+      <section className="content-section work-section" id="work" ref={(el) => (sectionsRef.current[4] = el)}>
+        <div className="container">
+          <div className="section-header">
+            <h2>Our Work</h2>
+            <p className="section-intro">
+              See how we've helped clients transform their sales presentations with 3D visualization
+            </p>
+          </div>
+          
+          <div className="work-grid">
+            <div className="work-card">
+              <div className="work-video">
+                <svg viewBox="0 0 16 9" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="16" height="9" fill="#1a1a1a"/>
+                  <circle cx="8" cy="4.5" r="1.5" fill="#ffffff" opacity="0.8"/>
+                  <polygon points="7.2,3.3 7.2,5.7 9,4.5" fill="#1a1a1a"/>
+                </svg>
+              </div>
+              <div className="work-info">
+                <h3>Countrytowne</h3>
+              </div>
+            </div>
+
+            <div className="work-card">
+              <div className="work-video">
+                <svg viewBox="0 0 16 9" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="16" height="9" fill="#1a1a1a"/>
+                  <circle cx="8" cy="4.5" r="1.5" fill="#ffffff" opacity="0.8"/>
+                  <polygon points="7.2,3.3 7.2,5.7 9,4.5" fill="#1a1a1a"/>
+                </svg>
+              </div>
+              <div className="work-info">
+                <h3>ServiceNow</h3>
+              </div>
+            </div>
+
+            <div className="work-card">
+              <div className="work-video">
+                <svg viewBox="0 0 16 9" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="16" height="9" fill="#1a1a1a"/>
+                  <circle cx="8" cy="4.5" r="1.5" fill="#ffffff" opacity="0.8"/>
+                  <polygon points="7.2,3.3 7.2,5.7 9,4.5" fill="#1a1a1a"/>
+                </svg>
+              </div>
+              <div className="work-info">
+                <h3>NVIDIA</h3>
+              </div>
+            </div>
+
+            <div className="work-card">
+              <div className="work-video">
+                <svg viewBox="0 0 16 9" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="16" height="9" fill="#1a1a1a"/>
+                  <circle cx="8" cy="4.5" r="1.5" fill="#ffffff" opacity="0.8"/>
+                  <polygon points="7.2,3.3 7.2,5.7 9,4.5" fill="#1a1a1a"/>
+                </svg>
+              </div>
+              <div className="work-info">
+                <h3>Hitachi</h3>
+              </div>
+            </div>
+
+            <div className="work-card">
+              <div className="work-video">
+                <svg viewBox="0 0 16 9" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="16" height="9" fill="#1a1a1a"/>
+                  <circle cx="8" cy="4.5" r="1.5" fill="#ffffff" opacity="0.8"/>
+                  <polygon points="7.2,3.3 7.2,5.7 9,4.5" fill="#1a1a1a"/>
+                </svg>
+              </div>
+              <div className="work-info">
+                <h3>Enterprise Client</h3>
+              </div>
+            </div>
+
+            <div className="work-card">
+              <div className="work-video">
+                <svg viewBox="0 0 16 9" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="16" height="9" fill="#1a1a1a"/>
+                  <circle cx="8" cy="4.5" r="1.5" fill="#ffffff" opacity="0.8"/>
+                  <polygon points="7.2,3.3 7.2,5.7 9,4.5" fill="#1a1a1a"/>
+                </svg>
+              </div>
+              <div className="work-info">
+                <h3>Manufacturing Partner</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="cta-section" id="contact" ref={(el) => (sectionsRef.current[4] = el)}>
+      <section className="cta-section" id="contact" ref={(el) => (sectionsRef.current[5] = el)}>
         <div className="container">
           <h2>Ready to Transform Your Sales Presentations?</h2>
           <p>Join 50+ companies using RenderDraw to close deals faster with 3D visualization</p>
