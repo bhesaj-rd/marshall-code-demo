@@ -1,0 +1,203 @@
+.app {
+  position: relative;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.cta-button {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  background: white;
+  color: #667eea;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0.7;
+  animation: bounce 2s infinite;
+}
+
+/* Journey Sections */
+.journey-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  position: relative;
+}
+
+.journey-section:nth-child(even) {
+  background: var(--bg-secondary);
+}
+
+.journey-content {
+  max-width: 800px;
+  animation: fadeInUp 1s ease-out;
+  animation-fill-mode: both;
+  animation-play-state: paused;
+}
+
+.journey-section[data-step="1"] .journey-content {
+  animation-delay: 0.2s;
+}
+
+.journey-section[data-step="2"] .journey-content {
+  animation-delay: 0.2s;
+}
+
+.journey-section[data-step="3"] .journey-content {
+  animation-delay: 0.2s;
+}
+
+.journey-number {
+  font-size: 6rem;
+  font-weight: 700;
+  color: var(--primary);
+  opacity: 0.1;
+  margin-bottom: -2rem;
+  font-family: Georgia, serif;
+}
+
+.journey-title {
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.journey-text {
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: 600px;
+}
+
+/* Final Section */
+.final-section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  color: white;
+  padding: 4rem 2rem;
+}
+
+.final-content {
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+.final-title {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.final-subtitle {
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+/* Footer */
+.footer {
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Scroll Animation Trigger */
+.journey-section.visible .journey-content {
+  animation-play-state: running;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    padding: 1rem;
+  }
+  
+  .journey-section {
+    padding: 3rem 1.5rem;
+  }
+  
+  .journey-number {
+    font-size: 4rem;
+  }
+}
