@@ -20,6 +20,18 @@ const server = http.createServer((req, res) => {
     return;
   }
 
+  if (req.url === '/status') {
+    const currentTime = Date.now();
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({
+      serverStartTime: new Date(startTime).toISOString(),
+      currentTime: new Date(currentTime).toISOString(),
+      uptimeSeconds: Math.floor((currentTime - startTime) / 1000),
+      nodeVersion: process.version
+    }));
+    return;
+  }
+
   res.writeHead(200, { 'Content-Type': 'text/html' });
   res.end('<h1>Marshall Code Demo</h1><p>Pipeline test project.</p>');
 });
