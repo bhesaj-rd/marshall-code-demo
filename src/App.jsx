@@ -231,13 +231,11 @@ function App() {
           <div className="work-grid">
             <div className="work-card">
               <div className="work-video">
-                <iframe 
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                  title="RenderDraw Demo"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                <svg viewBox="0 0 16 9" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="16" height="9" fill="#1a1a1a"/>
+                  <circle cx="8" cy="4.5" r="1.5" fill="#ffffff" opacity="0.8"/>
+                  <polygon points="7.2,3.3 7.2,5.7 9,4.5" fill="#1a1a1a"/>
+                </svg>
               </div>
               <div className="work-info">
                 <h3>Countrytowne</h3>
@@ -246,13 +244,11 @@ function App() {
 
             <div className="work-card">
               <div className="work-video">
-                <iframe 
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                  title="RenderDraw Demo"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                <svg viewBox="0 0 16 9" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="16" height="9" fill="#1a1a1a"/>
+                  <circle cx="8" cy="4.5" r="1.5" fill="#ffffff" opacity="0.8"/>
+                  <polygon points="7.2,3.3 7.2,5.7 9,4.5" fill="#1a1a1a"/>
+                </svg>
               </div>
               <div className="work-info">
                 <h3>ServiceNow</h3>
@@ -261,13 +257,11 @@ function App() {
 
             <div className="work-card">
               <div className="work-video">
-                <iframe 
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                  title="RenderDraw Demo"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                <svg viewBox="0 0 16 9" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="16" height="9" fill="#1a1a1a"/>
+                  <circle cx="8" cy="4.5" r="1.5" fill="#ffffff" opacity="0.8"/>
+                  <polygon points="7.2,3.3 7.2,5.7 9,4.5" fill="#1a1a1a"/>
+                </svg>
               </div>
               <div className="work-info">
                 <h3>NVIDIA</h3>
@@ -276,13 +270,11 @@ function App() {
 
             <div className="work-card">
               <div className="work-video">
-                <iframe 
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                  title="RenderDraw Demo"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                <svg viewBox="0 0 16 9" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="16" height="9" fill="#1a1a1a"/>
+                  <circle cx="8" cy="4.5" r="1.5" fill="#ffffff" opacity="0.8"/>
+                  <polygon points="7.2,3.3 7.2,5.7 9,4.5" fill="#1a1a1a"/>
+                </svg>
               </div>
               <div className="work-info">
                 <h3>Hitachi</h3>
@@ -291,13 +283,11 @@ function App() {
 
             <div className="work-card">
               <div className="work-video">
-                <iframe 
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                  title="RenderDraw Demo"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                <svg viewBox="0 0 16 9" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="16" height="9" fill="#1a1a1a"/>
+                  <circle cx="8" cy="4.5" r="1.5" fill="#ffffff" opacity="0.8"/>
+                  <polygon points="7.2,3.3 7.2,5.7 9,4.5" fill="#1a1a1a"/>
+                </svg>
               </div>
               <div className="work-info">
                 <h3>Enterprise Client</h3>
@@ -306,13 +296,11 @@ function App() {
 
             <div className="work-card">
               <div className="work-video">
-                <iframe 
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                  title="RenderDraw Demo"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                <svg viewBox="0 0 16 9" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="16" height="9" fill="#1a1a1a"/>
+                  <circle cx="8" cy="4.5" r="1.5" fill="#ffffff" opacity="0.8"/>
+                  <polygon points="7.2,3.3 7.2,5.7 9,4.5" fill="#1a1a1a"/>
+                </svg>
               </div>
               <div className="work-info">
                 <h3>Manufacturing Partner</h3>
