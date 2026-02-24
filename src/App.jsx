@@ -39,6 +39,7 @@ function App() {
           <div className="nav-links">
             <a href="#solutions">Solutions</a>
             <a href="#products">Products</a>
+            <a href="#work">Work</a>
             <a href="#contact" className="nav-cta">Get Started</a>
           </div>
         </nav>
@@ -217,8 +218,112 @@ function App() {
         </div>
       </section>
 
+      {/* Work Section */}
+      <section className="content-section work-section" id="work" ref={(el) => (sectionsRef.current[4] = el)}>
+        <div className="container">
+          <div className="section-header">
+            <h2>Our Work</h2>
+            <p className="section-intro">
+              See how we've helped clients transform their sales presentations with 3D visualization
+            </p>
+          </div>
+          
+          <div className="work-grid">
+            <div className="work-card">
+              <div className="work-video">
+                <iframe 
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                  title="RenderDraw Demo"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="work-info">
+                <h3>Countrytowne</h3>
+              </div>
+            </div>
+
+            <div className="work-card">
+              <div className="work-video">
+                <iframe 
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                  title="RenderDraw Demo"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="work-info">
+                <h3>ServiceNow</h3>
+              </div>
+            </div>
+
+            <div className="work-card">
+              <div className="work-video">
+                <iframe 
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                  title="RenderDraw Demo"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="work-info">
+                <h3>NVIDIA</h3>
+              </div>
+            </div>
+
+            <div className="work-card">
+              <div className="work-video">
+                <iframe 
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                  title="RenderDraw Demo"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="work-info">
+                <h3>Hitachi</h3>
+              </div>
+            </div>
+
+            <div className="work-card">
+              <div className="work-video">
+                <iframe 
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                  title="RenderDraw Demo"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="work-info">
+                <h3>Enterprise Client</h3>
+              </div>
+            </div>
+
+            <div className="work-card">
+              <div className="work-video">
+                <iframe 
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                  title="RenderDraw Demo"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="work-info">
+                <h3>Manufacturing Partner</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="cta-section" id="contact" ref={(el) => (sectionsRef.current[4] = el)}>
+      <section className="cta-section" id="contact" ref={(el) => (sectionsRef.current[5] = el)}>
         <div className="container">
           <h2>Ready to Transform Your Sales Presentations?</h2>
           <p>Join 50+ companies using RenderDraw to close deals faster with 3D visualization</p>
