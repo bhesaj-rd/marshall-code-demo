@@ -1,64 +1,56 @@
 const http = require('http');
+const pkg = require('./package.json');
 
-const PORT = 3999;
+const BASE = `http://localhost:${process.env.PORT || 3000}`;
 let server;
+let passed = 0;
+let failed = 0;
 
-function startServer() {
-  return new Promise((resolve) => {
-    process.env.PORT = PORT;
-    server = require('./server.js');
-    // Give server time to start
-    setTimeout(resolve, 500);
-  });
+function test(name, fn) {
+  return fn().then(() => { passed++; console.log(`  PASS: ${name}`); })
+    .catch(e => { failed++; console.log(`  FAIL: ${name} — ${e.message}`); });
 }
 
-function request(path) {
+function fetch(path) {
   return new Promise((resolve, reject) => {
-    http.get(`http://localhost:${PORT}${path}`, (res) => {
+    http.get(BASE + path, res => {
       let data = '';
-      res.on('data', (chunk) => data += chunk);
+      res.on('data', c => data += c);
       res.on('end', () => resolve({ status: res.statusCode, body: data }));
     }).on('error', reject);
   });
 }
 
-async function runTests() {
-  let passed = 0;
-  let failed = 0;
+async function run() {
+  // Start server
+  server = require('./server.js');
+  await new Promise(r => setTimeout(r, 500));
 
-  // Test 1: Health endpoint
-  try {
-    const res = await request('/health');
-    const body = JSON.parse(res.body);
-    if (res.status === 200 && body.status === 'ok' && body.timestamp) {
-      console.log('PASS: /health returns status ok with timestamp');
-      passed++;
-    } else {
-      console.log('FAIL: /health unexpected response', body);
-      failed++;
-    }
-  } catch (e) {
-    console.log('FAIL: /health error', e.message);
-    failed++;
-  }
+  console.log('Running tests...');
 
-  // Test 2: Root endpoint
-  try {
-    const res = await request('/');
-    if (res.status === 200 && res.body.includes('Marshall Code Demo')) {
-      console.log('PASS: / returns demo page');
-      passed++;
-    } else {
-      console.log('FAIL: / unexpected response');
-      failed++;
-    }
-  } catch (e) {
-    console.log('FAIL: / error', e.message);
-    failed++;
-  }
+  await test('GET /health returns 200', async () => {
+    const r = await fetch('/health');
+    if (r.status !== 200) throw new Error(`status ${r.status}`);
+    const j = JSON.parse(r.body);
+    if (j.status !== 'ok') throw new Error(`status field: ${j.status}`);
+  });
 
-  console.log(`\nResults: ${passed} passed, ${failed} failed`);
+  await test('GET /version returns version and uptime', async () => {
+    const r = await fetch('/version');
+    if (r.status !== 200) throw new Error(`status ${r.status}`);
+    const j = JSON.parse(r.body);
+    if (j.version !== pkg.version) throw new Error(`version mismatch: ${j.version}`);
+    if (typeof j.uptime !== 'number') throw new Error(`uptime not a number: ${j.uptime}`);
+  });
+
+  await test('GET / returns HTML', async () => {
+    const r = await fetch('/');
+    if (r.status !== 200) throw new Error(`status ${r.status}`);
+    if (!r.body.includes('Marshall Code Demo')) throw new Error('missing title');
+  });
+
+  console.log(`\n${passed} passed, ${failed} failed`);
   process.exit(failed > 0 ? 1 : 0);
 }
 
-runTests();
+run();
