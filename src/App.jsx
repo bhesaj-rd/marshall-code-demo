@@ -54,6 +54,7 @@ function App() {
           <div className="hero-cta-group">
             <button className="btn-primary">Start Free Trial</button>
             <button className="btn-secondary">Watch Demo</button>
+            <a href="#contact" className="btn-contact">Contact Us</a>
           </div>
         </div>
       </section>
